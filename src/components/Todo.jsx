@@ -11,7 +11,7 @@ const Todo = ({ todo, getTodo }) => {
     if (!user) return;
 
     const response = await fetch(
-      `http://localhost:8000/api/todos/${todo._id}`,
+      `https://todoapp-api-l6hu.onrender.com/api/todos/${todo._id}`,
       {
         method: "DELETE",
         headers: {

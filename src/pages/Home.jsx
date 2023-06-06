@@ -17,11 +17,14 @@ const Home = () => {
   // FETCH TODOS
   useEffect(() => {
     const fetchTodos = async () => {
-      const response = await fetch("http://localhost:8000/api/todos", {
-        headers: {
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://todoapp-api-l6hu.onrender.com/api/todos",
+        {
+          headers: {
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const data = await response.json();
 
       if (response.ok) {

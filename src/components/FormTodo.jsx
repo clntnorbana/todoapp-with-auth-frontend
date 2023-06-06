@@ -20,14 +20,17 @@ const FormTodo = () => {
 
     const todo = { title };
 
-    const response = await fetch("http://localhost:8000/api/todos", {
-      method: "POST",
-      body: JSON.stringify(todo),
-      headers: {
-        "Content-type": "application/json",
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      "https://todoapp-api-l6hu.onrender.com/api/todos",
+      {
+        method: "POST",
+        body: JSON.stringify(todo),
+        headers: {
+          "Content-type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
 
     const data = await response.json();
 

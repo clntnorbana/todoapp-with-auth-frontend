@@ -10,7 +10,7 @@ const Edit = ({ editTodo, closeForm }) => {
 
   const updateTodo = async (e) => {
     const response = await fetch(
-      `http://localhost:8000/api/todos/${editTodo._id}`,
+      `https://todoapp-api-l6hu.onrender.com/api/todos/${editTodo._id}`,
       {
         method: "PATCH",
         body: JSON.stringify({
