@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="text-gray-50">
-      <BrowserRouter>
+      <BrowserRouter basename="/">
         <Navbar />
         <div className="container mx-auto lg:px-80 md:px-40 px-5 mt-10">
           <Routes>
